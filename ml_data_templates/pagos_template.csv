@@ -1,0 +1,2 @@
+ap_payment_id,vendor_id,request_date,approval_date,paid_date,amount,method,bank_ref
+AP-50001,v_102,2025-07-05,2025-07-08,2025-07-10,8000,transferencia,TRX67890

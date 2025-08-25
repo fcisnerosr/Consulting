@@ -1,0 +1,2 @@
+payment_id,invoice_id,payment_date,amount,method,bank_ref
+P-90001,F-2025-0001,2025-07-20,11600,transferencia,TRX12345

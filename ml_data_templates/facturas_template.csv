@@ -1,0 +1,2 @@
+invoice_id,customer_id,issue_date,due_date,subtotal,tax,total,currency,status,payment_terms,uuid_cfdi
+F-2025-0001,c_7781,2025-07-01,2025-07-31,10000,1600,11600,MXN,emitida,Net30,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX

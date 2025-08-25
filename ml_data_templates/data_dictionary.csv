@@ -1,0 +1,73 @@
+dataset,field,type,description,allowed_values,pii,required,example
+tickets,ticket_id,string,ID único de ticket,,No,Sí,845923
+tickets,created_at,datetime,Fecha/hora de creación ISO 8601,,No,Sí,2025-07-01 10:35
+tickets,channel,category,Canal de entrada,"web, app, email, phone, whatsapp",No,Sí,email
+tickets,priority,category,Prioridad de atención,"P1,P2,P3,P4",No,Sí,P2
+tickets,category,category,Macro-categoría del ticket,,No,Sí,Facturación
+tickets,subcategory,category,Subcategoría,,No,No,CFDI erróneo
+tickets,status,category,Estado del ticket,"abierto,en_proceso,resuelto,cerrado,reabierto",No,Sí,resuelto
+tickets,group,category,Equipo/área asignada,,No,Sí,SAC
+tickets,assignee_id,string,ID del agente asignado,,No,No,u103
+tickets,customer_id,string,ID pseudonimizado del cliente,,No,Sí,c_7781
+tickets,first_response_at,datetime,Fecha/hora de primera respuesta,,No,No,2025-07-01 10:41
+tickets,resolved_at,datetime,Fecha/hora de resolución,,No,Sí,2025-07-01 16:12
+tickets,closed_at,datetime,Fecha/hora de cierre,,No,No,2025-07-03 09:10
+tickets,reopened_at,datetime,Fecha/hora de reapertura (si aplica),,No,No,
+tickets,subject,string,Asunto/texto corto del ticket,,No,No,Factura con RFC incorrecto
+tickets,description,string,Descripción del ticket,,No,No,El CFDI...
+tickets,tags,string,Etiquetas separadas por coma,,No,No,"cfdi,error_rfc"
+users,user_id,string,ID del usuario/agente,,No,Sí,u103
+users,role,category,Rol del usuario,"agente,supervisor,operaciones",No,Sí,agente
+users,team,category,Equipo/grupo,,No,Sí,SAC
+users,shift,category,Turno,"matutino,vespertino,nocturno",No,No,matutino
+users,seniority_months,int,Antigüedad en meses,,No,No,18
+satisfaction,ticket_id,string,ID de ticket vinculado,,No,Sí,845923
+satisfaction,csat_score,number,Puntaje de satisfacción (1–5),,No,No,4
+satisfaction,csat_comment,string,Comentario de satisfacción,,No,No,Rápida solución
+satisfaction,csat_date,datetime,Fecha de encuesta,,No,No,2025-07-02 11:00
+taxonomy,category,category,Catálogo de categorías,,No,No,Facturación
+taxonomy,subcategory,category,Catálogo de subcategorías,,No,No,CFDI erróneo
+facturas,invoice_id,string,ID/folio interno de factura,,No,Sí,F-2025-0001
+facturas,customer_id,string,ID pseudonimizado de cliente,,No,Sí,c_7781
+facturas,issue_date,date,Fecha de emisión,,No,Sí,2025-07-01
+facturas,due_date,date,Fecha de vencimiento,,No,No,2025-07-31
+facturas,subtotal,number,Importe sin impuestos,,No,Sí,10000
+facturas,tax,number,"Impuestos (IVA, etc.)",,No,No,1600
+facturas,total,number,Total de la factura,,No,Sí,11600
+facturas,currency,category,Moneda,"MXN,USD,...",No,Sí,MXN
+facturas,status,category,Estatus de la factura,"emitida,abonada,vencida,cancelada",No,Sí,emitida
+facturas,payment_terms,category,Condiciones de pago,"Net15,Net30,...",No,No,Net30
+facturas,uuid_cfdi,string,UUID del CFDI (si aplica),,No,No,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+cobros,payment_id,string,ID de cobro,,No,Sí,P-90001
+cobros,invoice_id,string,ID de factura asociada,,No,Sí,F-2025-0001
+cobros,payment_date,date,Fecha de cobro,,No,Sí,2025-07-20
+cobros,amount,number,Monto cobrado,,No,Sí,11600
+cobros,method,category,Método de pago,"transferencia,tarjeta,cheque,efectivo",No,No,transferencia
+cobros,bank_ref,string,Referencia bancaria,,No,No,TRX12345
+pagos,ap_payment_id,string,ID de pago a proveedor,,No,Sí,AP-50001
+pagos,vendor_id,string,ID pseudonimizado de proveedor,,No,Sí,v_102
+pagos,request_date,date,Fecha de solicitud,,No,Sí,2025-07-05
+pagos,approval_date,date,Fecha de aprobación,,No,No,2025-07-08
+pagos,paid_date,date,Fecha de pago,,No,No,2025-07-10
+pagos,amount,number,Monto pagado,,No,Sí,8000
+pagos,method,category,Método de pago,"transferencia,cheque",No,No,transferencia
+pagos,bank_ref,string,Referencia bancaria,,No,No,TRX67890
+proveedores,vendor_id,string,ID pseudonimizado de proveedor,,No,Sí,v_102
+proveedores,payment_terms,category,Condiciones de pago,"Net15,Net30,...",No,No,Net30
+bancos,date,date,Fecha de operación,,No,Sí,2025-07-02
+bancos,account,category,Cuenta bancaria,,No,Sí,BANMX-001
+bancos,description,string,Descripción/glosa,,No,No,Abono cliente c_7781
+bancos,reference,string,Referencia bancaria,,No,No,REF-20250702-01
+bancos,amount,number,Monto (+abono / -cargo),,No,Sí,-3500
+bancos,balance,number,Saldo posterior,,No,No,120000
+polizas,poliza_id,string,ID de póliza,,No,Sí,POL-2025-07-001
+polizas,date,date,Fecha de póliza,,No,Sí,2025-07-02
+polizas,account_code,string,Código de cuenta contable,,No,Sí,4001-01
+polizas,debit,number,Débito,,No,No,0
+polizas,credit,number,Crédito,,No,No,3500
+polizas,reference,string,Referencia/documento,,No,No,F-2025-0001
+polizas,uuid_cfdi,string,UUID del CFDI (si aplica),,No,No,XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+cat_cuentas,account_code,string,Código de cuenta,,No,Sí,4001-01
+cat_cuentas,account_name,string,Nombre de cuenta,,No,Sí,Ingresos por servicio
+cat_cuentas,parent,string,Cuenta padre (si aplica),,No,No,4001
+cat_cuentas,type,category,Tipo de cuenta,"activo,pasivo,ingreso,gasto,capital",No,Sí,ingreso

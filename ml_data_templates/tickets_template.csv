@@ -1,0 +1,2 @@
+ticket_id,created_at,channel,priority,category,subcategory,status,group,assignee_id,customer_id,first_response_at,resolved_at,closed_at,reopened_at,subject,description,tags
+845923,2025-07-01 10:35,email,P2,Facturación,CFDI erróneo,resuelto,SAC,u103,c_7781,2025-07-01 10:41,2025-07-01 16:12,2025-07-03 09:10,,Factura con RFC incorrecto,El CFDI...,"cfdi,error_rfc"
